@@ -13,4 +13,5 @@ model User {
   phone     String
   email     String   @unique
   birthdate DateTime
+  gender    String
 }
