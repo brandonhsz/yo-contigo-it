@@ -7,7 +7,7 @@ import { DBService } from '../shared/services/db/DB.service';
 export class UsersService {
   constructor(
     private readonly DBService: DBService,
-    private Logger: Logger,
+    private readonly Logger: Logger,
   ) {}
 
   async create(data: CreateUserDto) {
