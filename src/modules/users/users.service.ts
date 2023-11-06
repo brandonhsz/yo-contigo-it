@@ -15,10 +15,7 @@ export class UsersService {
       where: { email: data.email },
     });
 
-    if (!user)
-      return await this.DBService.user.create({
-        data: { ...data, birthdate: new Date(data.birthdate) },
-      });
+    if (!user) return await this.DBService.user.create({ data });
 
     this.Logger.error(`User with email ${data.email} already exists`);
     return {

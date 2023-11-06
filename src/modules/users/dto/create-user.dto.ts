@@ -24,9 +24,9 @@ export class CreateUserDto {
   email: string;
 
   @IsISO8601()
-  birthdate: string;
+  birthdate: Date;
 
   @IsNotEmpty()
   @IsIn(['F', 'M'])
-  gender: 'F' | 'M';
+  gender: string;
 }

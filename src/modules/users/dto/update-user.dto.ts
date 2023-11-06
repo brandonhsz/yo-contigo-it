@@ -22,8 +22,8 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
   email?: string;
 
   @IsDate()
-  birthdate?: string;
+  birthdate?: Date;
 
   @IsIn(['F', 'M'])
-  gender?: 'F' | 'M';
+  gender?: string;
 }
